@@ -3,14 +3,14 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 import time
 # Optional: specify the path to geckodriver if it's not in your PATH
-geckodriver_path = '/path/to/geckodriver'
+geckodriver_path = '/usr/local/bin/geckodriver'
 
 # Setup Firefox options (optional)
 options = Options()
   # Optional: run in headless mode if you don't want to open a window
 
 # Setup service object for geckodriver
-service = Service()
+service = Service(geckodriver_path)
 
 # Initialize WebDriver for Firefox
 driver = webdriver.Firefox(service=service, options=options)
