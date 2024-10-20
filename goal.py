@@ -6,12 +6,12 @@ import requests
 import os.path
 import os
 
-my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+my_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 
 async def main():
     #connect_server()
     await asyncio.sleep(1)
-    browser = await uc.start(browser_args=[f"--user-agent={my_user_agent}"])
+    browser = await uc.start(browser_args=[f"--user-agent={my_user_agent}", "--window-size=1920,1080"])
     page = await browser.get('https://www.google.com')
     await asyncio.sleep(20000000)
 
